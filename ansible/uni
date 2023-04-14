@@ -1,0 +1,16 @@
+---
+- name: Install Brackets on Ubuntu Linux
+  hosts: all
+  become: true
+
+  tasks:
+    - name: Add Brackets repository
+      apt_repository:
+        repo: deb [arch=amd64] https://brackets.download/repository/apt stable main
+        state: present
+        update_cache: yes
+
+    - name: Install Brackets
+      apt:
+        name: brackets
+        state: present
