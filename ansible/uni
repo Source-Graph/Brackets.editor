@@ -1,6 +1,6 @@
 ---
 - name: Install Brackets on Ubuntu Linux
-  hosts: all
+  hosts: test #all
   become: true
 
   tasks:
